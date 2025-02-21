@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'vampiro';
+    src: url('fontes/ghastly_panic/Ghastly\ Panic.ttf');
+}
+
+body {
+    background-color: black;
+    color: #fff;
+    margin: 30px;
+
+}
+.vampiro {
+    font-family: 'vampiro';
+    color: red;
+  
+
+}
+
+h1 {
+    text-align: center;
+    font-size: 80px;
+
+}
+
+p {
+    font-size: 40px;
+    text-align: center;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.shadow {
+    background-image: url('imagens/shadow.jpg');
+    background-size: cover;
+}
+
+.hidden{
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateX(-100%);
+    transition: all 1.5s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0%);
+    transition: all 1.5s;
+}
+img {
+    height: 150px;
+    width: 150px;
+    
+}
+a :hover {
+    filter: blur(1.5px);
+    transform: translateY(2%);
+    transition: all 0.5s;
+}
+
+
+.avatar {
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 5px;
+    border: 1px solid #fff;
+}
+
+.logo {
+    display: flex;
+    gap: 20px;
+}
+
+.logo :nth-child(2){
+    transition-delay: 400ms;
+}
+.logo :nth-child(3){
+    transition-delay: 700ms;
+}
+.logo :nth-child(4){
+    transition-delay: 1000ms;
+}
+
+/*******************papei de oarede******************************/
+
+.lobo {
+    background-image: url('imagens/1.jpg');
+    
+}
+.sonic {
+    background-image: url('imagens/5.jpg');
+}

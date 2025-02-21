@@ -1,0 +1,266 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+body /*{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('imagens/cover1.jpg');
+    background-size: cover;
+    
+display: flex;
+align-items: center;
+justify-content: center;
+}*/
+h1 {
+    font-size: 50px;
+}
+p {
+    font-size: 30px;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-items: center;
+    border: 2px solid #fff;
+    min-height: 100vh;
+}
+
+.fundo 
+    {
+        width: 100%;
+        min-height: 100vh;
+        background-image: url('imagens/cover1.jpg');
+        background-size: cover;
+        
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+.fundo2 {
+    background-image: url('imagens/cidade.jpg');
+    background-size: cover;
+
+}
+
+.fundo3 {
+    background-image: url('imagens/valfenda.jpg');
+    background-size: cover;
+}
+
+/*************************Barra de navegação*******************************************/
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+nav {
+
+display: flex;
+justify-content: space-around;
+align-items: center;
+font-family: system-ui, -apple-system, 
+Helvetica, sans-serif;
+background: #23232e;
+height: 8vh;
+
+}
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+}
+/***************fim da navegação****************************/
+
+
+
+
+
+
+
+.placa {
+    width: 100%;
+    max-width: 700px;
+    background-color: transparent;
+    padding: 35px;
+    border: 1px solid #fff;
+    border-radius: 0px;
+    backdrop-filter: blur(0px);
+    overflow: hidden;
+    transition: backdrop-filter 1s;
+    transition: border-radius 1s;
+}
+
+.placa2 {
+    width: 100%;
+    max-width: 800px;
+    background-color: transparent;
+    padding: 35px;
+    border: 1px solid #fff;
+    border-radius: 0px;
+    backdrop-filter: blur(0px);
+    overflow: hidden;
+    transition: backdrop-filter 1s;
+    transition: border-radius 1s;
+}
+
+
+.text {
+    color: #fff;
+    position: relative;
+    top: 300px;
+    transition: top 1s;
+}
+
+
+.placa:hover .text {
+    top: 0;
+}
+
+.placa:hover {
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+.placa2:hover .text {
+    top: 0;
+}
+
+.placa2:hover {
+    backdrop-filter: blur(10px);
+    border-radius: 15px 70px;
+}
+
+#assinatura {
+    font-size: 12px;
+}
+
+
+/*******************************Midia de cell**************************************/
+
+
+@media (max-width: 999px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+
+    .placa {
+        width: 90%;
+        max-width: 300px;
+        background-color: transparent;
+        padding: 35px;
+        border: 1px solid #fff;
+        border-radius: 0px;
+        backdrop-filter: blur(0px);
+        overflow: hidden;
+        transition: backdrop-filter 1s;
+        transition: border-radius 1s;
+    }
+    .text {
+        color: #fff;
+        position: relative;
+        top: 600px;
+        transition: top 1.5s;
+    }
+
+    .placa2 {
+        width: 90%;
+        max-width: 300px;
+        background-color: transparent;
+        padding: 35px;
+        border: 1px solid #fff;
+        border-radius: 0px;
+        backdrop-filter: blur(0px);
+        overflow: hidden;
+        transition: backdrop-filter 1s;
+        transition: border-radius 1s;
+    }
+
+
+
+/**************************Navegação mobile**********************************************/
+
+.nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 50vw;
+    height: 92vh;
+    background: #23232e;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+}
+.nav-list li {
+    margin-left: 0;
+    opacity: 1;
+}
+.mobile-menu {
+    display: block;
+}
+
+.nav-list.active {
+    transform: translateX(0);
+}
+
+.mobile-menu.active .line1 {
+    transform:rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+.mobile-menu.active .line3 {
+    transform:rotate(+45deg) translate(-5px, -7px);
+}
+
+
+
+@keyframes navlinkFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    } to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+    
+}
